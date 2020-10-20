@@ -24,11 +24,12 @@ class ArticleList extends React.Component {
                             <Link to={`/articles/${article.article_id}`}>
                                 <h3>{article.title}</h3>
                             </Link>
-                            <p>rating: </p>
-                            <p>comments: </p>
+                            <p>rating: {article.votes}</p>
+                            <p>comments: {article.comment_count}</p>
                         </div>
                     )
                 })
+
             )
         }
     }

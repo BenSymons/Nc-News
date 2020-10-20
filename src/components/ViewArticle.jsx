@@ -13,13 +13,18 @@ class ViewArticle extends React.Component {
     }
 
     render() {
-        const { title, body } = this.state.article;
+        const { title, body, comment_count, votes } = this.state.article;
         return (
-            <div>
-                <p>here is an article</p>
-                <p>{title}</p>
-                <p>{body}</p>
-            </div>
+            <>
+                <div>
+                    <p>Title: {title}</p>
+                    <p>Comments: {comment_count}</p>
+                    <p>Rating: {votes}</p>
+                </div>
+                <div>
+                    <p>{body}</p>
+                </div>
+            </>
         )
     }
 }
