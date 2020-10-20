@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from "./components/Header"
 import ArticleList from "./components/ArticleList"
-import { Router, link } from "@reach/router"
+import { Router } from "@reach/router"
 import ViewArticle from "./components/ViewArticle"
 
 function App() {
