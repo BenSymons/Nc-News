@@ -1,5 +1,6 @@
 import React from "react"
 import axios from "axios"
+import { Link } from "@reach/router"
 
 
 class ArticleList extends React.Component {
@@ -18,11 +19,18 @@ class ArticleList extends React.Component {
         else {
             return (
                 this.state.articles.map(article => {
-                    return (<p>{article.title}</p>)
+                    return (
+                        <div>
+                            <Link to={`/articles/${article.article_id}`}>
+                                <h3>{article.title}</h3>
+                            </Link>
+                            <p>rating: </p>
+                            <p>comments: </p>
+                        </div>
+                    )
                 })
             )
         }
-
     }
 }
 
