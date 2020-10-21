@@ -40,7 +40,7 @@ class ArticleList extends React.Component {
                             <li>
                                 <div>
                                     <Link to={`/articles/${article.article_id}`}>
-                                        <h2>{article.title}</h2>
+                                        <h3>{article.title}</h3>
                                     </Link>
                                     <p>rating: {article.votes}</p>
                                     <p>comments: {article.comment_count}</p>
