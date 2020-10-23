@@ -27,7 +27,6 @@ class ViewArticle extends React.Component {
                         </div>
                         <p>{body}</p>
                     </section>
-                    <h3>Comments</h3>
                     <CommentList article_id={this.props.article_id} />
                 </>
             )

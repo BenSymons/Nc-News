@@ -42,6 +42,7 @@ class CommentList extends React.Component {
     render() {
         if (this.state.isLoading) return <p>Loading...</p>
         return <section className="comment_section">
+            <h3 id="comments">Comments</h3>
             <ul className="no-bullets">
                 {this.state.comments.map(comment => {
                     return <li key={comment.comment_id} className="comment">

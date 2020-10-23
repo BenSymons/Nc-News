@@ -117,3 +117,9 @@ form{
     margin: auto;
     margin-bottom: 10px;
 }
+
+#comments{
+display: grid;
+justify-content: center;
+text-decoration: underline;
+}
