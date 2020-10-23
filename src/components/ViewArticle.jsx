@@ -1,5 +1,6 @@
 import Axios from "axios"
 import React from "react"
+import CommentList from "./CommentList"
 
 class ViewArticle extends React.Component {
     state = {
@@ -8,12 +9,12 @@ class ViewArticle extends React.Component {
     }
     componentDidMount() {
         Axios.get(`https://bensymonsncnews.herokuapp.com/api/articles/${this.props.article_id}`).then(res => {
-            console.dir(res.data.article)
             this.setState({ article: res.data.article, isLoading: false })
         })
     }
 
     render() {
+        //console.dir(this.state)
         const { title, body, comment_count, votes } = this.state.article;
         if (this.state.isLoading) return <p>Loading...</p>
         else {
@@ -27,6 +28,7 @@ class ViewArticle extends React.Component {
                     <div>
                         <p>{body}</p>
                     </div>
+                    <CommentList article_id={this.props.article_id} />
                 </>
             )
         }

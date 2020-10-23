@@ -1,7 +1,7 @@
 import React from "react"
 import axios from "axios"
 import { Link } from "@reach/router"
-import PostArticle from "./PostArticle"
+// import PostArticle from "./PostArticle"
 
 
 class ArticleList extends React.Component {
@@ -27,17 +27,17 @@ class ArticleList extends React.Component {
         else {
             return (
                 <div>
-                    <div>
+                    {/* <div>
                         <p>Sort by</p>
                         <button onClick={() => { this.SortBy("created_at") }}>Newest</button>
                         <button onClick={() => { this.SortBy("votes") }}>Votes</button>
                         <button onClick={() => { this.SortBy("comment_count") }}>Comments</button>
                     </div>
-                    <PostArticle />
+                    <PostArticle /> */}
                     <ul />
                     {this.state.articles.map(article => {
                         return (
-                            <li>
+                            <li key={article.article_id}>
                                 <div>
                                     <Link to={`/articles/${article.article_id}`}>
                                         <h3>{article.title}</h3>

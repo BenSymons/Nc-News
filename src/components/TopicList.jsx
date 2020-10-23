@@ -1,6 +1,6 @@
 import Axios from "axios"
 import React from "react"
-import axios from "axios"
+// import axios from "axios"
 
 class TopicList extends React.Component {
     state = {
