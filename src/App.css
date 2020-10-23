@@ -36,3 +36,19 @@
 .link:hover{
     background-color: white;
 }
+
+.article_panel{
+    border: solid  rgb(19, 25, 51);
+    margin: 5px 10px;
+    padding: 0px 10px;
+    background-color:  rgb(176, 204, 255);
+}
+
+.sort_by{
+    margin:0px 10px;
+    font-size: 20px;
+}
+
+ul{
+    list-style-type: none;
+}
