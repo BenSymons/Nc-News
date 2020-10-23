@@ -5,12 +5,14 @@ import ArticleList from "./components/ArticleList"
 import { Router } from "@reach/router"
 import ViewArticle from "./components/ViewArticle"
 import TopicList from "./components/TopicList"
+import NavBar from "./components/NavBar"
 // import UserList from "./components/UserList"
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <div className="app">
+      <Header className = "header" />
+      <NavBar />
       <Router>
         <TopicList path="/topics"/>
         {/* <UserList path="/users"/> */}

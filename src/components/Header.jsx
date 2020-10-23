@@ -1,12 +1,13 @@
 import React from "react"
-import NavBar from "./NavBar"
+import { Link } from "@reach/router"
 
 const Header = () => {
-    return (<>
-        <h1>NC News</h1>
-        <p>The latest news from Northcoders</p>
-        <NavBar />
-    </>
+    return (<section className="header">
+        <Link to="/" className="link">
+            <h1 className="title">NC News</h1>
+        </Link>
+        <p className="intro">The latest news from Northcoders</p>
+    </ section>
     )
 }
 
