@@ -6,7 +6,7 @@ import { Router } from "@reach/router"
 import ViewArticle from "./components/ViewArticle"
 import TopicList from "./components/TopicList"
 import NavBar from "./components/NavBar"
-// import UserList from "./components/UserList"
+
 
 function App() {
   return (
@@ -15,7 +15,6 @@ function App() {
       <NavBar />
       <Router>
         <TopicList path="/topics"/>
-        {/* <UserList path="/users"/> */}
         <ArticleList path="/"/>
         <ViewArticle path="/articles/:article_id"/>
       </Router>

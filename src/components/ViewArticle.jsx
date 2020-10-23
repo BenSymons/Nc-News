@@ -14,20 +14,21 @@ class ViewArticle extends React.Component {
     }
 
     render() {
-        //console.dir(this.state)
         const { title, body, comment_count, votes } = this.state.article;
         if (this.state.isLoading) return <p>Loading...</p>
         else {
             return (
                 <>
-                    <div>
-                        <p>Title: {title}</p>
+                    <section className="article">
+                        <h3>{title}</h3>
                         <p>Comments: {comment_count}</p>
                         <p>Rating: {votes}</p>
-                    </div>
-                    <div>
-                        <p>{body}</p>
-                    </div>
+
+                        <div>
+                            <p>{body}</p>
+                        </div>
+                    </section>
+                    <h3>Comments</h3>
                     <CommentList article_id={this.props.article_id} />
                 </>
             )

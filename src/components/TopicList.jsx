@@ -1,6 +1,5 @@
 import Axios from "axios"
 import React from "react"
-// import axios from "axios"
 
 class TopicList extends React.Component {
     state = {
@@ -16,9 +15,9 @@ class TopicList extends React.Component {
     render() {
         if (this.state.isLoading) return <p>Loading...</p>
         return (
-            <ul>
+            <ul className="no-bullets article_list">
                 {this.state.topics.map(topic => {
-                    return <li>
+                    return <li className="article_panel">
                         <div>
                             <h3>{topic.slug}</h3>
                             <p>{topic.description}</p>

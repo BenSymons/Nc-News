@@ -17,7 +17,6 @@ class CommentList extends React.Component {
         })
         this.setState({ comments: newComments })
         axios.delete(`https://bensymonsncnews.herokuapp.com/api/comments/${id}`)
-        //removeComment()
     }
 
     addComment = (e) => {
@@ -35,22 +34,18 @@ class CommentList extends React.Component {
     handleUsername = (event) => {
         const value = event.target.value
         this.setState({ username: value })
-        //console.dir(this.state.username)
     }
     handleBody = (event) => {
         const value = event.target.value
         this.setState({ body: value })
-        //console.dir(this.state.body)
     }
     render() {
-        // const { comment_id, body, author, votes, created_at } = this.state.comments
         if (this.state.isLoading) return <p>Loading...</p>
-        return <section>
-            <ul>
+        return <section className="comment_section">
+            <ul className="no-bullets">
                 {this.state.comments.map(comment => {
-                    return <li key={comment.comment_id}>
+                    return <li key={comment.comment_id} className="comment">
                         <section>
-                            {/* <p>comment id: {comment.comment_id}</p> */}
                             <p>{comment.author}</p>
                             <p>{comment.body}</p>
                             <p>Date: {formatDate(comment.created_at)}</p>

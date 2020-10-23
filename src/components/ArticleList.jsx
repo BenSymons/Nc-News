@@ -1,8 +1,6 @@
 import React from "react"
 import axios from "axios"
 import { Link } from "@reach/router"
-// import PostArticle from "./PostArticle"
-
 
 class ArticleList extends React.Component {
     state = {
@@ -33,22 +31,21 @@ class ArticleList extends React.Component {
                         <button onClick={() => { this.SortBy("votes") }}>Votes</button>
                         <button onClick={() => { this.SortBy("comment_count") }}>Comments</button>
                     </div>
-                    {/* <PostArticle /> */}
-                    <ul />
-                    {this.state.articles.map(article => {
-                        return (
-                            <li className="article_panel" key={article.article_id}>
-                                <div>
-                                    <Link to={`/articles/${article.article_id}`}>
-                                        <h3>{article.title}</h3>
-                                        <p>rating: {article.votes}</p>
-                                        <p>comments: {article.comment_count}</p>
-                                    </Link>
-                                </div>
-                            </li>
-                        )
-                    })}
-                    <ul />
+                    <ul className="no-bullets article_list">
+                        {this.state.articles.map(article => {
+                            return (
+                                <li className="article_panel" key={article.article_id}>
+                                    <div>
+                                        <Link to={`/articles/${article.article_id}`} className="link">
+                                            <h3>{article.title}</h3>
+                                            <p>rating: {article.votes}</p>
+                                            <p>comments: {article.comment_count}</p>
+                                        </Link>
+                                    </div>
+                                </li>
+                            )
+                        })}
+                    </ ul>
                 </div>
 
             )
