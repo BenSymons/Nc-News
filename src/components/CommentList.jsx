@@ -46,7 +46,7 @@ class CommentList extends React.Component {
                 {this.state.comments.map(comment => {
                     return <li key={comment.comment_id} className="comment">
                         <section>
-                            <p>{comment.author}</p>
+                            <h4>{comment.author}</h4>
                             <p>{comment.body}</p>
                             <p>Date: {formatDate(comment.created_at)}</p>
                             <p>Votes: {comment.votes}</p>

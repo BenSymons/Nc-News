@@ -20,13 +20,12 @@ class ViewArticle extends React.Component {
             return (
                 <>
                     <section className="article">
-                        <h3>{title}</h3>
-                        <p>Comments: {comment_count}</p>
-                        <p>Rating: {votes}</p>
-
-                        <div>
-                            <p>{body}</p>
+                        <div className="article_stats">
+                            <h3>{title}</h3>
+                            <p>Comments: {comment_count}</p>
+                            <p>Rating: {votes}</p>
                         </div>
+                        <p>{body}</p>
                     </section>
                     <h3>Comments</h3>
                     <CommentList article_id={this.props.article_id} />

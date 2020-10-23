@@ -11,7 +11,12 @@ body{
     background-color: rgb(207, 207, 207);
 }
 @keyframes animation {
-
+    from {
+        margin-top: 100%;
+    }
+    to {
+        margin-top: 0%
+    }
 }
 
 .header{
@@ -62,7 +67,7 @@ body{
 
 .article_panel:hover{
     background-color: white;
-    transition: 1000ms
+    transition: 1000ms;
 }
 
 .sort_by{
@@ -76,7 +81,7 @@ body{
     border: solid  rgb(19, 25, 51);
     margin: 10px 5px;
     padding: 5px 20px;
-    background-color:  rgb(176, 204, 255);
+    background-color:  rgb(224, 224, 224);
 }
 
 ul.no-bullets{
@@ -89,10 +94,26 @@ ul.no-bullets{
     padding: 0px 20px;
     font-size: 20px;
     background-color: rgb(218, 214, 253);
+}
 
+.article_stats {
+    text-align: center;
+}
+
+ul {
+    animation-name: animation;
+    animation-duration: 2s;
 }
 
 .article_list{
     display:grid;
     justify-content: center;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
 }
